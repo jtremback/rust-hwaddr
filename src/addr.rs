@@ -19,10 +19,13 @@ use std::num::ParseIntError;
 use producer::{self, Producer};
 
 /// A MAC address.
+#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 #[derive(Copy, Clone, Eq, PartialEq, Debug, Hash)]
 pub struct HwAddr {
-	value: [u8; 6]
+	value: [u8; 6],
 }
+
+
 
 impl HwAddr {
 	/// Get the octets composing the MAC address.

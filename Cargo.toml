@@ -11,6 +11,7 @@ keywords    = ["address", "mac", "hw", "network"]
 
 [dependencies]
 phf = "0.7"
+serde = { version = "1.0", optional = true, features = ["derive"] }
 
 [build-dependencies]
 reqwest     = "0.6"

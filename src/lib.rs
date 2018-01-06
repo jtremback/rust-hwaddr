@@ -14,6 +14,10 @@
 
 ///! MAC address handling.
 
+#[cfg(feature = "serde")]
+#[macro_use]
+extern crate serde;
+
 extern crate phf;
 
 pub mod producer;
